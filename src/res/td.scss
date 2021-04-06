@@ -1,0 +1,89 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+
+$text-color: rgb(41, 41, 41);
+$body-bg: rgb(252, 252, 252);
+$container-width: 720px;
+
+$link-hover-decoration: none;
+
+$font: 'Inter', sans-serif, $font-family-base;
+$text-font: 'Oxygen Mono', monospace;
+
+$font-size-sm: $font-size-base * .8;
+$standard-font-size: $font-size-sm;
+
+$standard-font-weight: 400;
+$title-font-weight: 680;
+
+$margin-bottom: .6rem;
+$standard-padding: .16rem .4rem .14rem;
+
+@supports (font-variation-settings: normal) {
+	.container { 
+		font-family: 'Inter var', sans-serif, $font-family-base;
+	}
+}
+
+body {
+	overflow-x: hidden;
+	margin: 0;
+	color: $text-color;
+	background-color: $body-bg;
+}
+
+strong {
+	font-weight: 600;
+}
+
+small {
+	font-size: $font-size-sm;
+}
+
+h1, h2, h3, h4 {
+	font: {
+		family: $font;
+		weight: $title-font-weight;
+	}
+
+	line-height: 2.6rem;
+	margin-bottom: $margin-bottom;
+	word-wrap: break-word;
+}
+
+p {
+	font-family: $text-font;
+}
+
+a {
+	text-decoration: none;
+	
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.container {
+	font: {
+		size: $standard-font-size;
+		weight: $standard-font-weight;
+	}
+
+	padding: 1.6em;
+	max-width: $container-width;
+}
+
+a.link {
+	color: $text-color;
+}
+
+a.link:hover {
+	color: lighten($text-color, 28%);
+}
+
+.standalone-link {
+	display: block;
+}
