@@ -4,8 +4,14 @@ class Time extends Component {
   constructor (props) {
     super (props);
 
+    let n = new Date ();
+    let y = n.getFullYear ();
+    let m = n.getMonth () + 1;
+    let d = n.getDate ();
+
     this.state = {
-      time: new Date ().toLocaleTimeString ()
+      time: new Date ().toLocaleTimeString (),
+      date: m + '.' + d + '.' + y.toString ().slice (2, 4)
     }
   }
 
@@ -19,14 +25,16 @@ class Time extends Component {
 
   updateTime () {
     this.setState ({
-      time: new Date ().toLocaleTimeString ()
+      time: new Date ().toLocaleTimeString ('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
     });
   }
 
   render () {
     return (
-      <div className="time">
-        <p> {this.state.time} </p>
+      <div>
+        <p> 
+          <span className="time">{this.state.time} {this.state.date}</span>
+        </p>
       </div>
     );
   }

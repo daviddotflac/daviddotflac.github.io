@@ -18,8 +18,10 @@ $standard-font-size: $font-size-sm;
 $standard-font-weight: 400;
 $title-font-weight: 680;
 
-$margin-bottom: .6rem;
+$margin-bottom: .8rem;
 $standard-padding: .16rem .4rem .14rem;
+
+$purple: #673ab7;
 
 @supports (font-variation-settings: normal) {
 	.container { 
@@ -53,8 +55,6 @@ h1, h2, h3, h4 {
 	word-wrap: break-word;
 }
 
-
-
 p {
 	font-family: $text-font;
 }
@@ -78,12 +78,20 @@ a:hover {
 	max-width: $container-width;
 }
 
+.time {
+	color: $body-bg;
+	background-color: $purple;
+	padding: 0.24rem 0.44rem 0.2rem;
+	border-radius: 0.28rem;
+}
+
 a.link {
 	color: $text-color;
 }
 
 a.link:hover {
-	color: lighten($text-color, 40%);
+	// color: lighten($text-color, 40%);
+	text-decoration: underline;
 }
 
 .standalone-link {
