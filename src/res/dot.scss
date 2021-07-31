@@ -18,7 +18,7 @@ $standard-font-size: $font-size-sm;
 $standard-font-weight: 400;
 $title-font-weight: 680;
 
-$margin-bottom: .8rem;
+$standard-margin: .8rem;
 $standard-padding: .16rem .4rem .14rem;
 
 $purple: #673ab7;
@@ -51,7 +51,7 @@ h1, h2, h3, h4 {
 	}
 
 	line-height: 2.6rem;
-	margin-bottom: $margin-bottom;
+	margin-bottom: $standard-margin;
 	word-wrap: break-word;
 }
 
@@ -61,7 +61,6 @@ p {
 
 a {
 	text-decoration: none;
-	
 }
 
 a:hover {
@@ -96,4 +95,15 @@ a.link:hover {
 
 .standalone-link {
 	display: block;
+}
+
+.photo {
+	margin: {
+		bottom: $standard-margin;
+		right: $standard-margin;
+	}
+
+	width: 12rem;
+	height: 12rem;
+	border-radius: 0.4rem;
 }
